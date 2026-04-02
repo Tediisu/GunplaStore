@@ -1,5 +1,6 @@
-import { useEffect, useState } from 'react'
-import { supabase } from '../utils/supaClient'
+import { useEffect, useState, useRef } from 'react'
+import { supabase } from '../../utils/supaClient'
+import { Link } from 'react-router-dom'
 
 function Navbar() {
   const [ getLogoUrl, setLogoUrl ] = useState("");
@@ -31,7 +32,7 @@ function Navbar() {
           onMouseEnter={() => setNavHovered(true)}
           onMouseLeave={() => setNavHovered(false)}
         >
-          <a href="#" className="hover:underline whitespace-nowrap">Kits</a>
+          <Link to="/kits" className="hover:underline whitespace-nowrap">Kits</Link>
           <a href="#" className="hover:underline whitespace-nowrap">Figures</a>
           <a href="#" className="hover:underline whitespace-nowrap">Collectibles</a>
           <a href="#" className="hover:underline whitespace-nowrap">Pre-Orders</a>

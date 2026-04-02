@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react'
 import { supabase } from '../utils/supaClient'
-import Navbar from '../components/Navbar';
+import Navbar from '../components/layout/Navbar';
 
 function Home() {
   const [ imageUrl, setImageUrl] = useState("");
